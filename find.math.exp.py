@@ -24,7 +24,7 @@ source = sys.argv[1] # LaTeX file to search
 target = sys.argv[2] # Name for the output file
 
 # Check for custom regex from terminal input, otherwise default to math delimiter search
-if length(sys.argv) == 4:
+if len(sys.argv) == 4:
 	regex = sys.argv[3]
 else:
 	regex = '\$.+?\$'
@@ -42,7 +42,7 @@ g = open(target, 'w')
 g.write("\\documentclass{article} \n \\input{frontmatter} \n \\begin{document} \n\n")
 
 for w in sorted(output, key=output.get, reverse=True):
-	g.write(w + "\hspace{\\fill}" + str(output2[w]) + "\n\n")
+	g.write(w + "\hspace{\\fill}" + str(output[w]) + "\n\n")
 
 g.write("\\end{document}\n")
 
