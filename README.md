@@ -1,6 +1,17 @@
 # copyediting-scripts
 Scripts developed for copyediting work
 
+## csv2tex ##
+
+Python script for converting csv files to LaTeX tables.
+
+###Usage###
+
+`python csv2tex.py <path/to/csv>`
+
+The LaTeX output is printed to the terminal.  
+
+
 ## find.math.exp.py
 
 This script finds (by default) all math expressions in a .tex file and and creates a new .tex file listing these expression types and providing their token counts, from most to least frequent.  Optionally, an extra argument can be provided for a custom regex search. This argument, if provided, should be the regular expression itself, excluding the r'<...>' wrapper.
